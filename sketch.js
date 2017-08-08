@@ -24,6 +24,9 @@ let ALL_KILLER_BLOCKS = new Set();
 // classes 
 function Block(x=0,y=0)
     {
+        // summary
+            // a generic block that can draw itself
+        
         // x and y are the location data 
         this.x = x;
         this.y = y;
@@ -76,9 +79,10 @@ function KillerBlock(x=0,y=0)
 // global objects 
 var BORDER    = {
         // summary:
-            // the border is basically an array of KillerBlocks
-            // if the_snake.head touches an KillerBlock, it dies
-        blocks:[], 
+            // the border is basically a set of KillerBlocks
+            // if the_snake touches an KillerBlock, it dies
+            
+        blocks:new Set(), 
         // methods   
         Create: function()
             {
@@ -93,25 +97,25 @@ var BORDER    = {
                 // top row (doesn't do the last one)
                 for(loop_number = 1; loop_number <= NUM_OF_HORIZONTAL_BLOCKS-1; loop_number++)
                     {
-                        this.blocks.push(    new KillerBlock(  (loop_number-1)*PIXELS_PER_BLOCK,  0  )    );
+                        this.blocks.add(    new KillerBlock(  (loop_number-1)*PIXELS_PER_BLOCK,  0  )    );
                     }
                 
                 // bottom row (doesn't do the first one)
                 for(loop_number = 2; loop_number <= NUM_OF_HORIZONTAL_BLOCKS; loop_number++)
                     {
-                        this.blocks.push(     new KillerBlock(  (loop_number-1)*PIXELS_PER_BLOCK,  (NUM_OF_VERTICAL_BLOCKS-1)*PIXELS_PER_BLOCK  )    );
+                        this.blocks.add(     new KillerBlock(  (loop_number-1)*PIXELS_PER_BLOCK,  (NUM_OF_VERTICAL_BLOCKS-1)*PIXELS_PER_BLOCK  )    );
                     }
                 
                 // right column (doesn't do the last one)
                 for(loop_number = 1; loop_number <= NUM_OF_VERTICAL_BLOCKS-1; loop_number++)
                     {
-                        this.blocks.push(     new KillerBlock(  width-PIXELS_PER_BLOCK, (loop_number-1)*PIXELS_PER_BLOCK  )    );
+                        this.blocks.add(     new KillerBlock(  width-PIXELS_PER_BLOCK, (loop_number-1)*PIXELS_PER_BLOCK  )    );
                     }
             
                 // left column (doesn't do the first one)
                 for(loop_number = 2; loop_number <= NUM_OF_VERTICAL_BLOCKS; loop_number++)
                     {
-                        this.blocks.push(     new KillerBlock(  0,  (loop_number-1)*PIXELS_PER_BLOCK  )    );
+                        this.blocks.add(     new KillerBlock(  0,  (loop_number-1)*PIXELS_PER_BLOCK  )    );
                     }
             }, // end function
         Update: function()
