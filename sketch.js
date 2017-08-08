@@ -1,6 +1,6 @@
 // things to add 
-// game over screen
-// intro screen
+    // game over screen
+    // intro screen
 
 
 // helper functions
