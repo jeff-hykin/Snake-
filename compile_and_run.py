@@ -3,6 +3,14 @@ import sh
 import regex as re
 import webbrowser
 
+# summary:
+    # this is just a script for easy running/testing
+        # this checks the current directory,
+        # compiles the .pug file into .html,
+        # compiles the .sass file into .css,
+        # makes sure apache is running locally,
+        # then opens index.html
+
 
 
 # gets the current directory and removes the newline 
