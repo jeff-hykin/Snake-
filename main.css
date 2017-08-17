@@ -1,0 +1,13 @@
+html, body {
+  margin: 0; }
+
+header {
+  margin: 0;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=main.css.map */
