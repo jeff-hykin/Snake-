@@ -14,6 +14,8 @@ file_names = re.findall(r'(.+)\n',command_output)
 
 # check the directory 
 if re.match(r'/Library/WebServer/Documents/', directory_) == None:
+    # this is here to avoid issues related to HTML not having permission
+    # to include other files 
     print "\n\n\n\nI don't think you're in the right directory"
     print "to run web stuff, the project needs to be in:"
     print "Library/WebServer/Documents"
