@@ -1,4 +1,4 @@
 # Snake-
-The original snake game, coded in Javascript.
+A clone of the original snake game, re-coded in Javascript.
 
-To play, just clone/download and open index.html.
+To play, just clone/download and open index.html with Google Chrome.
